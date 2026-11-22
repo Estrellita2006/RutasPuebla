@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rutas Puebla | Transporte público</title>
+
+    <link rel="stylesheet" href="/static/styles.css">
+
+    <!-- Leaflet para el mapa -->
+    <link rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+</head>
+<body>
+
+    <header class="encabezado">
+        <div class="contenedor">
+            <h1>🚌 Rutas Puebla</h1>
+            <p>Encuentra paradas de transporte público en Puebla</p>
+        </div>
+    </header>
+
+    <main class="contenedor">
+
+
+
+
+        <section class="bienvenida">
+            <h2>Encuentra tu próxima parada</h2>
+            <p>Consulta las paradas disponibles y conoce las rutas de transporte.</p>
+        </section>
+
+        <section class="buscador">
+            <input
+                type="text"
+                id="buscar"
+                placeholder="Buscar parada por nombre, colonia o municipio">
+
+           <button type="button">Buscar</button>
+            <button onclick="mostrarTodas()">Mostrar todas</button>
+            <div style="margin-bottom: 25px;">
+            <a href="/registrar" class="boton-registrar">
+             + Registrar nueva parada
+            </a>
+           </div>
+        </section>
+
+        <section class="contenido">
+
+            <div class="lista-paradas">
+                <h2>Paradas disponibles</h2>
+                <div id="paradas">
+                    <p>Cargando paradas...</p>
+                </div>
+            </div>
+
+            <div class="seccion-mapa">
+                <h2>Mapa de Puebla</h2>
+                <div id="mapa"></div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Rutas Puebla © 2026 | Proyecto Sprint 1</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="/static/app.js"></script>
+
+</body>
+</html>

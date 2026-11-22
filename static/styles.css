@@ -1,0 +1,678 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f6fb;
+    color: #243247;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.encabezado {
+    background: #123b70;
+    color: white;
+    padding: 28px 0;
+}
+
+.encabezado h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.encabezado p {
+    color: #dce8f8;
+}
+
+.bienvenida {
+    padding: 35px 0 25px;
+}
+
+.bienvenida h2 {
+    font-size: 27px;
+    margin-bottom: 10px;
+    color: #123b70;
+}
+
+.bienvenida p {
+    color: #68778b;
+}
+
+.buscador {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.buscador input {
+    flex: 1;
+    min-width: 220px;
+    padding: 14px;
+    border: 1px solid #d3dce8;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+button {
+    padding: 14px 20px;
+    background: #1769aa;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background: #104c80;
+}
+
+.contenido {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.lista-paradas,
+.seccion-mapa {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+}
+
+.lista-paradas h2,
+.seccion-mapa h2 {
+    color: #123b70;
+    margin-bottom: 20px;
+}
+
+#mapa {
+    height: 420px;
+    width: 100%;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.parada {
+    padding: 16px;
+    border: 1px solid #e0e7ef;
+    border-radius: 9px;
+    margin-bottom: 12px;
+}
+
+.parada h3 {
+    color: #1769aa;
+    margin-bottom: 8px;
+}
+
+.parada p {
+    color: #68778b;
+    margin-bottom: 6px;
+}
+
+.parada button {
+    margin-top: 8px;
+    padding: 9px 13px;
+}
+
+footer {
+    background: #123b70;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 800px) {
+    .contenido {
+        grid-template-columns: 1fr;
+    }
+
+    .encabezado h1 {
+        font-size: 25px;
+    }
+
+    #mapa {
+        height: 350px;
+    }
+}
+
+.boton-registrar {
+    display: inline-block;
+    padding: 14px 22px;
+    background-color: #198754;
+    color: white !important;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.boton-registrar:hover {
+    background-color: #146c43;
+}
+/*apartir de aqui ya hice otros cambios*/
+/* ===== FORMULARIOS DE REGISTRO Y EDICIÓN ===== */
+
+.lista-paradas form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.lista-paradas form label {
+    font-weight: bold;
+    color: #123b70;
+    margin-top: 8px;
+}
+
+.lista-paradas form input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d3dce8;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+}
+
+.lista-paradas form input:focus {
+    border-color: #1769aa;
+    box-shadow: 0 0 0 3px rgba(23, 105, 170, 0.12);
+}
+
+.lista-paradas form input:read-only {
+    background: #edf2f8;
+    color: #123b70;
+    font-weight: bold;
+}
+
+.lista-paradas form button {
+    margin-top: 15px;
+    padding: 14px;
+    background: #1769aa;
+    font-size: 16px;
+}
+
+.lista-paradas form button:hover {
+    background: #104c80;
+}
+
+#mensaje {
+    margin-top: 18px;
+    color: #198754;
+    font-weight: bold;
+}
+/* estos son los cambios modernos*/
+
+
+/* ===== NUEVO DISEÑO RUTAS PUEBLA ===== */
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f1f4f9;
+    color: #172b4d;
+}
+
+/* Encabezado azul marino */
+.encabezado {
+    background: linear-gradient(110deg, #071a35, #173b70);
+    color: white;
+    padding: 25px 0;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+}
+
+.encabezado h1 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.encabezado p {
+    color: #d6e2f3;
+}
+
+/* Contenido principal */
+.contenedor {
+    width: 92%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.bienvenida {
+    padding: 30px 0 20px;
+}
+
+.bienvenida h2 {
+    color: #102b50;
+    font-size: 25px;
+}
+
+/* Buscador */
+.buscador {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 28px;
+}
+
+.buscador input {
+    flex: 1;
+    border: 1px solid #d8e0eb;
+    border-radius: 9px;
+    padding: 14px;
+    background: white;
+}
+
+/* Botones */
+button {
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+/* Botón registrar */
+.boton-registrar {
+    display: inline-block;
+    background: #079b70;
+    color: white !important;
+    padding: 13px 20px;
+    border-radius: 9px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.boton-registrar:hover {
+    background: #067b5a;
+}
+
+/* Lista y mapa */
+.contenido {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 25px;
+    align-items: start;
+}
+
+.lista-paradas,
+.seccion-mapa {
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+}
+
+.lista-paradas h2,
+.seccion-mapa h2 {
+    color: #102b50;
+    font-size: 23px;
+    margin-bottom: 18px;
+}
+
+/* Tarjetas de paradas */
+#paradas {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.parada {
+    background: white;
+    border: 1px solid #e0e6ef;
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 3px 10px rgba(20, 45, 80, 0.07);
+    margin-bottom: 0;
+}
+
+.parada h3 {
+    color: #123b70;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.parada p {
+    font-size: 14px;
+    margin-bottom: 9px;
+    color: #52647c;
+}
+
+.parada button {
+    margin: 8px 4px 0 0;
+    padding: 10px 12px;
+}
+
+/* Mapa */
+#mapa {
+    height: 510px;
+    border-radius: 14px;
+    border: 1px solid #dce4ee;
+    box-shadow: 0 4px 14px rgba(20, 45, 80, 0.10);
+    overflow: hidden;
+}
+
+/* Adaptación a celulares */
+@media (max-width: 900px) {
+    .contenido {
+        grid-template-columns: 1fr;
+    }
+
+    #paradas {
+        grid-template-columns: 1fr;
+    }
+
+    #mapa {
+        height: 380px;
+    }
+}
+
+@media (max-width: 600px) {
+    .buscador {
+        flex-direction: column;
+    }
+
+    .encabezado h1 {
+        font-size: 24px;
+    }
+}
+
+/* ===== MEJORAR TARJETAS DE PARADAS ===== */
+
+#paradas {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    align-items: stretch;
+}
+
+.parada {
+    min-width: 0;
+    padding: 16px;
+    border: 1px solid #e0e7f0;
+    border-radius: 13px;
+    background: #ffffff;
+    box-shadow: 0 3px 12px rgba(16, 43, 80, 0.07);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.parada:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 18px rgba(16, 43, 80, 0.12);
+}
+
+.parada h3 {
+    font-size: 17px;
+    color: #123b70;
+    margin-bottom: 12px;
+    overflow-wrap: anywhere;
+}
+
+.parada p {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 7px;
+}
+
+/* ===== BOTONES DE CADA PARADA ===== */
+
+.parada button {
+    display: inline-block;
+    width: auto;
+    padding: 9px 11px;
+    margin: 9px 3px 0 0;
+    font-size: 12px;
+    border-radius: 7px;
+    white-space: nowrap;
+}
+
+/* Ver en mapa */
+.parada button:first-of-type {
+    background: #1769d2;
+}
+
+/* Editar */
+.parada button:nth-of-type(2) {
+    background: #079b70;
+}
+
+/* Eliminar */
+.parada button:nth-of-type(3) {
+    background: #dc3545;
+}
+
+.parada button:hover {
+    filter: brightness(0.92);
+}
+
+/* ===== BUSCADOR MÁS COMPACTO ===== */
+
+.buscador {
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.buscador input {
+    height: 45px;
+    min-width: 0;
+    font-size: 14px;
+}
+
+.buscador button {
+    height: 45px;
+    padding: 0 19px;
+    white-space: nowrap;
+}
+
+/* ===== DISEÑO RESPONSIVO ===== */
+
+@media (max-width: 600px) {
+    #paradas {
+        grid-template-columns: 1fr;
+    }
+
+    .parada button {
+        padding: 9px 10px;
+        font-size: 12px;
+    }
+}
+
+/* ===== SCROLL INDEPENDIENTE PARA LAS PARADAS ===== */
+
+#paradas {
+    max-height: 550px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 5px 10px 10px 3px;
+    align-content: start;
+}
+
+/* Diseño de la barra de desplazamiento */
+#paradas::-webkit-scrollbar {
+    width: 8px;
+}
+
+#paradas::-webkit-scrollbar-track {
+    background: #e8edf5;
+    border-radius: 10px;
+}
+
+#paradas::-webkit-scrollbar-thumb {
+    background: #7894b8;
+    border-radius: 10px;
+}
+
+#paradas::-webkit-scrollbar-thumb:hover {
+    background: #123b70;
+}
+
+/* Mantener el mapa visible al desplazarse por la página */
+.seccion-mapa {
+    position: sticky;
+    top: 20px;
+}
+/* ===== DISEÑO DE REGISTRAR Y EDITAR ===== */
+
+.formulario-pagina {
+    width: 92%;
+    max-width: 760px;
+    margin: 25px auto 45px;
+}
+
+.volver-inicio {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 16px;
+    background: #123b70;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    margin: 15px 0;
+    transition: background 0.2s;
+}
+
+.volver-inicio:hover {
+    background: #0b274b;
+}
+
+.formulario-pagina .lista-paradas {
+    background: white;
+    max-width: 700px;
+    margin: 12px auto 0;
+    padding: 28px 34px;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.formulario-pagina .lista-paradas h2 {
+    font-size: 23px;
+    color: #123b70;
+    margin-bottom: 18px;
+}
+
+.formulario-pagina .lista-paradas form {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.formulario-pagina .lista-paradas form label {
+    font-size: 14px;
+    margin-top: 6px;
+    color: #123b70;
+}
+
+.formulario-pagina .lista-paradas form input {
+    width: 100%;
+    height: 42px;
+    padding: 10px 12px;
+    font-size: 14px;
+    border: 1px solid #d3dce8;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.formulario-pagina .lista-paradas form input:focus {
+    border-color: #1769aa;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(23, 105, 170, 0.12);
+}
+
+.formulario-pagina .lista-paradas form input:read-only {
+    background: #edf2f8;
+    color: #123b70;
+    font-weight: bold;
+}
+
+.acciones-formulario {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+}
+
+.acciones-formulario button,
+.boton-cancelar {
+    min-width: 145px;
+    height: 43px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 8px;
+    padding: 0 18px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.acciones-formulario button {
+    margin-top: 0 !important;
+    background: #1769aa;
+    color: white;
+}
+
+.acciones-formulario button:hover {
+    background: #104c80;
+}
+
+.boton-cancelar {
+    background: #e8edf4;
+    color: #30445e;
+}
+
+.boton-cancelar:hover {
+    background: #d6dfeb;
+}
+
+.formulario-pagina #mensaje {
+    margin-top: 18px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 600px) {
+    .formulario-pagina .lista-paradas {
+        padding: 20px;
+    }
+
+    .acciones-formulario button,
+    .boton-cancelar {
+        width: 100%;
+    }
+}
+/* Cajas de texto más pequeñas en Registrar y Editar */
+/* Mismo tamaño de cajas para Registrar y Editar */
+.formulario-pagina input,
+.formulario-pagina select,
+.formulario-pagina textarea {
+    width: 100% !important;
+    max-width: 480px !important;
+    height: 36px !important;
+    padding: 7px 10px !important;
+    font-size: 13px !important;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+
+/* Alinear las etiquetas con las cajas */
+.formulario-pagina .lista-paradas form label {
+    font-size: 13px;
+    margin-top: 5px;
+}

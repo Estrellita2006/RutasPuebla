@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar parada | Rutas Puebla</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <div class="contenedor">
+            <h1>🚌 Rutas Puebla</h1>
+            <p>Registro de nuevas paradas</p>
+        </div>
+        <main class="contenedor formulario-pagina">
+    </header>
+      <a href="/" class="volver-inicio">
+        ← Volver al inicio
+    </a>
+    <main class="contenedor">
+        <section class="lista-paradas">
+            <h2>Registrar nueva parada</h2>
+
+            <form id="formulario-parada">
+
+                <label for="id">ID de la parada</label>
+                <input type="text" id="id" readonly>
+
+                <label for="nombre">Nombre de la parada</label>
+                <input type="text" id="nombre" required>
+
+                <label for="colonia">Colonia</label>
+                <input type="text" id="colonia" required>
+
+                <label for="municipio">Municipio</label>
+                <input type="text" id="municipio" value="Puebla" required>
+
+                <label for="latitud">Latitud</label>
+                <input type="number" id="latitud" step="any" required>
+
+                <label for="longitud">Longitud</label>
+                <input type="number" id="longitud" step="any" required>
+
+                <label for="rutas">Rutas de transporte</label>
+                <input type="text" id="rutas"
+                    placeholder="Ejemplo: Ruta 10, Ruta 25">
+
+                <br><br>
+
+                  <div class="acciones-formulario">
+    <button type="submit">Guardar cambios</button>
+    <a href="/" class="boton-cancelar">Cancelar</a>
+</div>
+
+            </form>
+
+            <p id="mensaje"></p>
+        </section>
+    </main>
+
+    <script src="/static/registrar.js"></script>
+
+</body>
+</html>
